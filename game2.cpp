@@ -31,8 +31,7 @@ int main()
 
         cin >> key;
 
-        // Clear the screen after input
-        system("clear"); // Clears the screen (Windows only)
+        system("clear"); // Clears the screen (Linux only) for windows use cls
 
         if (key > num)
         {
