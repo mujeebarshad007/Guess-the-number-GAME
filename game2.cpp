@@ -44,6 +44,14 @@ void game(void)
             cout << " Life left are " << n << endl;
             getch();
         }
+        else if (key < num && key > 18)
+        {
+            system("clear");
+            cout << " You are too Close increase it more" << endl;
+            n--;
+            cout << " Life left are " << n << endl;
+            getch();
+        }
         else if (key < num)
         {
 
@@ -53,6 +61,7 @@ void game(void)
             cout << " Life left are " << n << endl;
             getch();
         }
+
         if (n == 0)
         {
 
