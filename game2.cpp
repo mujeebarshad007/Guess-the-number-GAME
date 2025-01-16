@@ -1,17 +1,18 @@
 #include <iostream>
 #include "conio.h" // For getch()
+int n = 5;
+const int num = 20;
 
 using namespace std;
 
-int main()
+void game(void)
 {
+    bool life = false;
     bool found = false;
-    const int num = 20;
     int key;
 
     while (!found)
     {
-        // Display the welcome and game instructions
         cout << "\t\t\t\t                                               " << endl;
         cout << "\t\t\t\t_______________________________________________" << endl;
         cout << "\t\t\t\t|                                              |" << endl;
@@ -30,25 +31,45 @@ int main()
         cout << "\t\t\t\t|______________________________________________|" << endl;
 
         cin >> key;
-
-        system("clear"); // Clears the screen (Linux only) for windows use cls
-
+        if (key == num)
+        {
+            cout << "Congratulations! You guessed the right number!\n";
+            exit(0);
+        }
         if (key > num)
         {
+            system("clear");
             cout << "Oops! The number is too big. Please reduce it.\n";
+            n--;
+            cout << " Life left are " << n << endl;
+            getch();
         }
         else if (key < num)
         {
+
+            system("clear");
             cout << "Oops! The number is too small. Please increase it.\n";
+            n--;
+            cout << " Life left are " << n << endl;
+            getch();
         }
-        else
+        if (n == 0)
         {
-            found = true; // The correct number is guessed
+
+            system("clear");
+            cout << " No lives left . You Lost" << endl;
+            cout << " Press Enter to start  this game again " << endl;
+            getch();
         }
     }
+}
 
-    // Final message when the correct number is guessed
-    cout << "Congratulations! You guessed the right number!\n";
-
+int main()
+{
+    while (1)
+    {
+        game();
+        getch();
+    }
     return 0;
 }
