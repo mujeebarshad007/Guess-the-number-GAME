@@ -20,7 +20,8 @@ void game(void)
         cout << "\t\t\t\t|      Welcome to Guessing Number Game !       |" << endl;
         cout << "\t\t\t\t|                                              |" << endl;
         cout << "\t\t\t\t|     I have Hidden a Number in this box       |" << endl;
-        cout << "\t\t\t\t|         ___________________                  |" << endl;
+        cout << "\t\t\t\t|     The Number is a two Digit Number         |" << endl;
+        cout << "\t\t\t\t|         _____________________                |" << endl;
         cout << "\t\t\t\t|         |                   |                |" << endl;
         cout << "\t\t\t\t|         |     Find me!      |                |" << endl;
         cout << "\t\t\t\t|         |        ?          |                |" << endl;
